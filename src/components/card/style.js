@@ -2,17 +2,16 @@ import styled from "styled-components"
 
 export const StyledCard = styled.div`
   height: 300px;
-  min-width: 240px;
-  max-width: 240px;
-  margin: 20px;
+  width: 240px;
   position: relative;
-  display: inline-block;
+  display: grid;
   text-align: center;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
   background: #222f3e;
   transition: all 0.3s;
-  flex: 1;
+  overflow: visible;
+  margin: 20px 0;
   :hover {
     cursor: pointer;
     transform: scale(1.05);

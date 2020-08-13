@@ -14,10 +14,11 @@ const Menu = () => {
         onClick={() => setOpen(!open)}
         size={48}
         style={{
-          position: "absolute",
+          position: "fixed",
           top: "20px",
           left: "24px",
           cursor: "pointer",
+          zIndex: "15",
         }}
       ></MenuIcon>
       <StyledMenu open={open}>

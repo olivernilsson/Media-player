@@ -5,8 +5,8 @@ export const StyledMenu = styled.div`
   width: 260px;
   left: ${(props) => (props.open ? "0px" : "-260px")};
   background: #2f3640;
-  position: absolute;
-  z-index: 5;
+  position: fixed;
+  z-index: 15;
   top: 0;
 `
 

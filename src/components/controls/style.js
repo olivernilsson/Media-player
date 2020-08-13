@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const StyledControls = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 100px;
   width: 100%;
