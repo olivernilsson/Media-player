@@ -1,15 +1,19 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { StyledDisplay } from "./style"
 import Card from "../card"
 import musicData from "../../music"
 import videoData from "../../videos"
+import store from "../../store"
 
 const Display = () => {
-  let state = "music"
+  let state = store.getState()
 
-  console.log(musicData)
+  useEffect(() => {
+    state = store.getState()
+    console.log(state)
+  });
 
-  if (state === "music") {
+  if (state.display === "MUSIC") {
     return (
       <StyledDisplay>
         {musicData.map((song) => (
@@ -23,7 +27,7 @@ const Display = () => {
         ))}
       </StyledDisplay>
     )
-  } else if (state === "video") {
+  } else if (state.display === "VIDEO") {
     return (
       <StyledDisplay>
         {videoData.map((song) => (
@@ -37,7 +41,7 @@ const Display = () => {
         ))}
       </StyledDisplay>
     )
-  } else if (state === "options") {
+  } else if (state.display === "OPTIONS") {
     return (
       <StyledDisplay>
         <h2>Options</h2>

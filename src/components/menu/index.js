@@ -5,6 +5,7 @@ import {
   StyledMenuOptionsContainer,
 } from "./style"
 import { Menu as MenuIcon, X } from "react-feather"
+import store from "../../store"
 
 const Menu = () => {
   const [open, setOpen] = useState(false)
@@ -33,9 +34,9 @@ const Menu = () => {
           }}
         ></X>
         <StyledMenuOptionsContainer>
-          <StyledMenuOption>Music</StyledMenuOption>
-          <StyledMenuOption>Videos</StyledMenuOption>
-          <StyledMenuOption>Options</StyledMenuOption>
+          <StyledMenuOption onClick={() => store.dispatch({ type: "UPDATE_DISPLAY", data: "MUSIC" })}>Music</StyledMenuOption>
+          <StyledMenuOption onClick={() => store.dispatch({ type: "UPDATE_DISPLAY", data: "VIDEO" })}>Videos</StyledMenuOption>
+          <StyledMenuOption onClick={() => store.dispatch({ type: "UPDATE_DISPLAY", data: "OPTIONS" })}>Options</StyledMenuOption>
         </StyledMenuOptionsContainer>
       </StyledMenu>
     </React.Fragment>
