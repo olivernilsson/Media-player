@@ -1,4 +1,3 @@
-
 export default function (state = "MUSIC", action) {
     switch (action.type) {
 

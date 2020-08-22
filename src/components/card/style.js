@@ -20,6 +20,8 @@ export const StyledCard = styled.div`
 
 export const StyledCardImage = styled.img`
   width: 80%;
+  height: 144px;
   margin: 20px auto;
+  object-fit: cover;
 `
 export const StyledCardText = styled.div``

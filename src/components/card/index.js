@@ -1,9 +1,11 @@
 import React from "react"
 import { StyledCard, StyledCardImage, StyledCardText } from "./style"
+import store from "../../store"
 
 const Card = (props) => {
+
   return (
-    <StyledCard>
+    <StyledCard onClick={() => store.dispatch({ type: "UPDATE_CURRENTLY_PLAYING", data: {title: props.title, artist: props.artist ? props.artist : props.desc, image: props.image} })}>
       <StyledCardImage
         src={props.image || "/images/placeholder"}
         alt="artist"

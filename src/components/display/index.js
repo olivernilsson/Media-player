@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useState } from "react"
 import { StyledDisplay } from "./style"
 import Card from "../card"
 import musicData from "../../music"
@@ -6,11 +6,10 @@ import videoData from "../../videos"
 import store from "../../store"
 
 const Display = () => {
-  let state = store.getState()
+  const [state, setState] = useState(store.getState())
 
-  useEffect(() => {
-    state = store.getState()
-    console.log(state)
+  store.subscribe(() => {
+    setState(store.getState())
   });
 
   if (state.display === "MUSIC") {
