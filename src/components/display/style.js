@@ -15,3 +15,14 @@ export const StyledDisplay = styled.div`
     display: none;
   }
 `
+export const StyledOptionsTitle = styled.div`
+  font-size: 2rem;
+  grid-column: 1 / 3;
+`
+export const StyledOptionsRow = styled.div`
+  grid-column: 2 / 3;
+`
+export const StyledOptionsText = styled.div`
+  font-size: 1.5rem;
+  grid-column: 1/ 2;
+`
